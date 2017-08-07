@@ -10,4 +10,4 @@ import firebase from 'firebase'
     messagingSenderId: "356208951644"
   };
   export const firebaseApp = firebase.initializeApp(config)
-  export const eventsRef = firebaseApp.database().ref().child('events')
+  export const eventsRef = firebaseApp.database().ref().child('events') //use .ref().child('events')

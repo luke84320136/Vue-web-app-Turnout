@@ -15,7 +15,7 @@
       <input type="date" class="form-control" v-model="event.date">
     </div>
     <div class="form-group">
-      <label>位置</label>
+      <label>地點</label>
       <input type="text" class="form-control" v-model="event.location">
     </div>
     <button class="btn-sm btn-primary" @click="addEvent">完成</button>
