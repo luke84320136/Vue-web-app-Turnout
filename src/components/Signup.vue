@@ -2,17 +2,8 @@
   <div class="from-inline">
     <h3>註冊</h3>
     <div class="form-group">
-      <input
-      type="text"
-      placeholder="E-mail"
-      class="form-control"
-      v-model="email"
-      />
-      <input type="password"
-      placeholder="密碼"
-      class="form-control"
-      v-model="password"
-      />
+      <input type="text" placeholder="E-mail" class="form-control" v-model="email" />
+      <input type="password" placeholder="密碼" class="form-control" v-model="password" />
       <button class="btn btn-primary" @click="signUp">註冊</button>
     </div>
     <br>
@@ -38,9 +29,9 @@
     methods: {
       signUp() {
         firebaseApp.auth().createUserWithEmailAndPassword(this.email, this.password)
-        .catch(error => {
-          this.error = error
-        })
+          .catch(error => {
+            this.error = error
+          })
       }
     }
   }

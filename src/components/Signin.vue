@@ -2,17 +2,8 @@
   <div class="from-inline">
     <h3>登入</h3>
     <div class="form-group">
-      <input
-      type="text"
-      placeholder="E-mail"
-      class="form-control"
-      v-model="email"
-      />
-      <input type="password"
-      placeholder="密碼"
-      class="form-control"
-      v-model="password"
-      />
+      <input type="text" placeholder="E-mail" class="form-control" v-model="email" />
+      <input type="password" placeholder="密碼" class="form-control" v-model="password" />
       <button class="btn btn-primary" @click="signIn">登入</button>
     </div>
     <br>
@@ -31,16 +22,16 @@
         email: '',
         password: '',
         error: {
-          message:''
+          message: ''
         }
       }
     },
     methods: {
       signIn() {
         firebaseApp.auth().signInWithEmailAndPassword(this.email, this.password)
-        .catch(error => {
-          this.error = error
-        })
+          .catch(error => {
+            this.error = error
+          })
       }
     }
   }

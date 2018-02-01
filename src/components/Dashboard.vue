@@ -6,11 +6,7 @@
     <AddEvent />
     <hr>
     <div class="col-md-12">
-      <EventItem
-      v-for="(event_item, index) in this.$store.state.events"
-      :event="event_item"
-      key="index"
-      />
+      <EventItem v-for="(event_item, index) in this.$store.state.events" :event="event_item" key="index" />
     </div>
   </div>
 </template>
@@ -29,8 +25,8 @@
     },
 
     components: {
-        AddEvent,
-        EventItem
+      AddEvent,
+      EventItem
     },
     mounted() {
       eventsRef.on('value', snap => {

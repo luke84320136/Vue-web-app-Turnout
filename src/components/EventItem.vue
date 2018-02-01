@@ -13,7 +13,7 @@
 </template>
 
 <script>
-export default {
-  props: ['event']
-}
+  export default {
+    props: ['event']
+  }
 </script>
